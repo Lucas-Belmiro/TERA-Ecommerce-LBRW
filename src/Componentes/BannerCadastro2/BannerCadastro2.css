@@ -1,0 +1,52 @@
+.ajuste-banner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #2326fe;
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-top: 40px;
+    text-align: center;
+    
+}
+
+.ajuste-banner div{
+    margin: 40px;
+}
+
+.ajuste-banner div h6{
+    color: whitesmoke;
+}
+
+.ajuste-botao2{
+
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: none;
+    background-color: white;
+    border-radius: 48px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 800px) {
+    .ajuste-banner{
+      flex-wrap: wrap;
+      padding-bottom: 30px;
+      padding-top: 30px;
+    }
+
+    .ajuste-banner div{
+        margin: 10px;
+
+    }
+    .ajuste-banner div h6{
+        
+        padding-left: 0;
+        padding-right: 0;
+        width: 18rem;
+    }
+}

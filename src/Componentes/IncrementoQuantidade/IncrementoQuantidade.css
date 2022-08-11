@@ -1,0 +1,23 @@
+.box-contador{
+    display: flex;
+}
+
+.espaco-clique{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-quantidade{
+    background-color: #2326fe;
+    border: none;
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

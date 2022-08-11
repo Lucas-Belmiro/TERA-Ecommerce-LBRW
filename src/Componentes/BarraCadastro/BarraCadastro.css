@@ -1,0 +1,23 @@
+.barra-cadastro{
+    margin-bottom: 80px;
+    padding: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2326fe;
+    color: whitesmoke;
+}
+
+.barra-cadastro div h5{
+    text-align: center;
+    padding: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .barra-cadastro div h5{
+        font-size: 90%;
+        padding: 20px;
+    }
+}

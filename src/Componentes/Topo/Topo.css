@@ -1,0 +1,12 @@
+.nav-ecommerce{
+    padding: 30px !important;
+}
+.icones{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icones img {
+    margin-left: 20px;
+}

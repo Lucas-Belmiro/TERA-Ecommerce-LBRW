@@ -1,0 +1,12 @@
+.barra-promocao{
+    width: 100%;
+    height: 40px;
+    background-color: #2F302B;
+}
+a{
+    text-decoration: underline;
+    color: whitesmoke;
+}
+a:hover{
+    color: rgb(254, 251, 247);
+}

@@ -1,0 +1,35 @@
+.footer{
+    background-color: #2F302B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.direitos{
+    background-color: #131312;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.direitos h6{
+    color: whitesmoke;
+    text-align: center;
+    padding: 10px;
+}
+
+.logo{
+    max-width: 240px;
+}
+
+.icones-sociais img{
+    max-width: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
