@@ -4,7 +4,7 @@ import SelecaoTamanho from "../SelecaoTamanho";
 import "./InfoProdutos.css"
 
 
-const InfoProdutos = ()=>{
+const InfoProdutos = (props)=>{
 
     let productArray = [
 

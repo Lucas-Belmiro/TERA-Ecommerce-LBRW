@@ -2,7 +2,7 @@ import "./Produto.css"
 
 import Topo from "../../Componentes/Topo";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 import BarraPromocao from "../../Componentes/BarraPromocao";
 import Blog from "../../Componentes/Blog";
 import BannerCadastro2 from "../../Componentes/BannerCadastro2";
@@ -115,6 +115,11 @@ function Produto(props) {
         numberSales: 0
     }
 ]
+
+useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
 
   return (
     <div className="Produto">
