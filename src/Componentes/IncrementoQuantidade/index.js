@@ -1,9 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./IncrementoQuantidade.css"
 
 const IncrmentoQuantidade = ()=>{
 
     const [count, setCount] = useState(1);
+
+    useEffect(()=>{
+        localStorage.setItem("quantidade", JSON.stringify(1))
+    }, [])
+
+    useEffect(()=>{
+        localStorage.setItem("quantidade", JSON.stringify(count))
+    }, [count])
 
     return (
         <div className="box-contador">

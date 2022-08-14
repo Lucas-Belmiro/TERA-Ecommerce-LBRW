@@ -1,0 +1,21 @@
+.ajusta-produtos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px;
+    margin: 0;
+  }
+  
+  .ajuste-blog{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  @media screen and (max-width: 800px) {
+    .ajuste-blog{
+      flex-wrap: wrap;
+    }
+  }

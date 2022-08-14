@@ -10,7 +10,7 @@ import {NavLink as Navigator, Link} from "react-router-dom";
 
 
 
-function NavScrollExample() {
+function Topo() {
   return (
     <Navbar bg="light" expand="lg" className='nav-ecommerce'>
       <Container fluid>
@@ -87,4 +87,4 @@ function NavScrollExample() {
   );
 }
 
-export default NavScrollExample;
+export default Topo;

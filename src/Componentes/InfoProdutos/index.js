@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import IncrmentoQuantidade from "../IncrementoQuantidade";
 import SelecaoTamanho from "../SelecaoTamanho";
 import "./InfoProdutos.css"
+import { Link } from "react-router-dom";
 
 
 const InfoProdutos = (props)=>{
@@ -145,7 +146,7 @@ const InfoProdutos = (props)=>{
                                 <IncrmentoQuantidade></IncrmentoQuantidade>
                             </div>
                             
-                            <button className="btn btn-primary botao-produto">Adicionar ao carrinho</button>
+                            <Link to="/carrinho" className="btn btn-primary botao-produto">Adicionar ao carrinho</Link>
                         </div>
                     </div>
                 </section>
