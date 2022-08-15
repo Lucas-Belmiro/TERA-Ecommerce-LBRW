@@ -9,6 +9,7 @@ import BannerCadastro2 from "../../Componentes/BannerCadastro2";
 import Titulo from "../../Componentes/Titulo";
 import Footer from "../../Componentes/Footer";
 import InfoCarrinho from "../../Componentes/InfoCarrinho";
+import PassosCompra from "../../Componentes/PassosCompra";
 
 
 
@@ -121,6 +122,8 @@ function Carrinho(props) {
     <div className="Produto">
       <BarraPromocao></BarraPromocao>
       <Topo></Topo>
+
+      <PassosCompra></PassosCompra>
 
       <InfoCarrinho></InfoCarrinho>
 

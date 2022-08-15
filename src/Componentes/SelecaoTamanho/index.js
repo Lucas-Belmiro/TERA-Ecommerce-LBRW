@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Form from 'react-bootstrap/Form';
+import "./SelecaoTamanho.css"
 
 function SelecaoTamanho() {
 
@@ -13,7 +14,7 @@ const [tamanho, setTamanho] = useState('38')
     <Form>
       {['radio'].map((type) => (
         <div key={`inline-${type}`} className="mb-3">
-          <Form.Check onClick={() => setTamanho(localStorage.setItem("tamanho", JSON.stringify(38)))}
+          <Form.Check className='form-selecao' onClick={() => setTamanho(localStorage.setItem("tamanho", JSON.stringify(38)))}
             inline
             label="38"
             name="group1"

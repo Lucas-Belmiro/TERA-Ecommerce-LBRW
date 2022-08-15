@@ -1,0 +1,79 @@
+p{
+    margin: 0;
+}
+
+.passos-compra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.box-1{
+    width: 33.33%;
+    background-color: #2326fe;
+    margin: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    
+}
+
+.box-2{
+    width: 33.33%;
+    background-color: #ebebeb;
+    margin: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.box-3{
+    width: 33.33%;
+    background-color: #ebebeb;
+    margin: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.ajuste-passos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    color: white;
+}
+
+@media screen and (max-width: 800px) {
+    .passos-compra{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-1{
+        width: 80%;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+    .box-2{
+        width: 80%;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+    .box-3{
+        width: 80%;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+}
