@@ -3,10 +3,16 @@ import "./Card.css"
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 
 function Card2(props) {
+
+    function armazenaId (){
+      localStorage.setItem(`${props.id}`, JSON.stringify(props.id))
+      localStorage.setItem(`id`, JSON.stringify(props.id))
+    }
+
 
   return (
     <Card className="ajuste-card" style={{ width: '18rem' }}>
@@ -16,7 +22,7 @@ function Card2(props) {
         <Card.Text>
          {props.preco}
         </Card.Text>
-       <Link  to="/produto" as={Link}  id={props.id} onClick={ () => localStorage.setItem("id", JSON.stringify(props.id))}  className="btn btn-primary ajuste-botao" variant="primary">Comprar</Link>
+       <Link  to="/produto" as={Link}  id={props.id} onClick={()=> armazenaId()} className="btn btn-primary ajuste-botao" variant="primary">Comprar</Link>
       </Card.Body>
     </Card>
   );

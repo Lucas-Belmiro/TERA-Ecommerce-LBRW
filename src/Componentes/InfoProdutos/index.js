@@ -118,6 +118,7 @@ const InfoProdutos = (props)=>{
         setObjeto(armazenaObjeto)
     }, [])
 
+
     return (
 
         <>      
