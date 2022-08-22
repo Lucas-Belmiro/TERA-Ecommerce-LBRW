@@ -1,12 +1,20 @@
 import "./ItemCarrinho.css"
 
 const ItemCarrinho = (props)=>{
+
+    function excluiProduto(param){
+
+        localStorage.setItem(`id`, JSON.stringify("null"))
+        localStorage.removeItem(param)
+        window.location.reload(false)
+        
+    }
     return(
         
                     <div>
-                        <button className="excluir-produto bg-light">
+                        <button id={props.id} onClick={()=> excluiProduto(props.id)} className="excluir-produto bg-light">
                             Excluir produto
-                        </button>
+                        </button >
 
                         <section className="box-infoproduto2">
                             <div className="box-img">

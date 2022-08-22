@@ -108,19 +108,10 @@ const InfoCarrinho = ()=>{
     ]
 
     const [carrinhoProdutos, setCarrinhoProdutos] = useState([]);
+    const [somaDeValores, setSomadeValores] = useState([]);
+    const [precos, setPrecos] = useState([]);
+    
 
-/*    
-
-    useEffect(()=>{
-        const armazenaId = JSON.parse(localStorage.getItem("id")) || []
-        for (let valor = 3; valor < (localStorage.length-3); valor++) {
-            JSON.parse(localStorage.getItem(`product${[valor]}`)) || []
-        }
-        
-        localStorage.setItem(`arrayProdutos`, JSON.stringify(produtosExistentes))
-    }, []) 
-
-     */
 
     useEffect(()=>{
         let armazenaArray = []
@@ -147,6 +138,28 @@ const InfoCarrinho = ()=>{
             setCarrinhoProdutos(armazenaObjetos)
     }, []) 
 
+    // soma de valores
+
+    useEffect(()=>{
+
+        let arrayDePrecos = [];
+
+        carrinhoProdutos.forEach(element => {
+            arrayDePrecos.push(parseInt(element.price))
+        });
+
+        const initialValue = 25;
+        const sumWithInitial = arrayDePrecos.reduce(
+          (previousValue, currentValue) => previousValue + currentValue,
+          initialValue
+        );
+      
+        setSomadeValores(sumWithInitial)
+
+        setPrecos(arrayDePrecos)
+    
+    }, [somaDeValores]) 
+
     return (
         <>
 
@@ -157,7 +170,7 @@ const InfoCarrinho = ()=>{
 
                         <h5 className="mb-3">Produto</h5>
                         <div className="ajusta-itens">
-                            {carrinhoProdutos.map(produto=><ItemCarrinho key = {produto.price} nome = {produto.name} imagem = {produto.img} ></ItemCarrinho>)}
+                            {carrinhoProdutos.map(produto=><ItemCarrinho key = {produto.price} nome = {produto.name} imagem = {produto.img} id = {produto.id}></ItemCarrinho>)}
                         </div>
                         
                         <div className="frete mt-3">
@@ -168,13 +181,12 @@ const InfoCarrinho = ()=>{
                 </div>
 
                 <div className="segunda-sessao">
-                    <div>
-                        
+                    <div>     
                         <h5 className="mb-3">Resumo</h5>
-                        <p>1 produto:             499</p>
+                        <p>{precos.length} produto(s):  {precos.map(precos=>`${precos} `)}</p>
                         <p>Frete:                 25 reais</p>
                         <hr className="separador"></hr>
-                        <p className="total-carrinho">Total:                 R$ 524</p>
+                        <p className="total-carrinho">Total: {somaDeValores}</p>
                         <button className="btn btn-primary botao-comprar">Comprar</button> 
                     </div>
 
