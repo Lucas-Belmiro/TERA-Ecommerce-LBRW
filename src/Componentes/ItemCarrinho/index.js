@@ -1,3 +1,5 @@
+import IncrmentoQuantidade from "../IncrementoQuantidade"
+import SelecaoTamanho from "../SelecaoTamanho"
 import "./ItemCarrinho.css"
 
 const ItemCarrinho = (props)=>{
@@ -7,6 +9,9 @@ const ItemCarrinho = (props)=>{
         localStorage.setItem(`id`, JSON.stringify("null"))
         localStorage.removeItem(param)
         window.location.reload(false)
+        this.forceUpdate()
+
+      
         
     }
     return(
@@ -23,8 +28,7 @@ const ItemCarrinho = (props)=>{
 
                             <div>
                                 <h6>{props.nome}</h6>
-                                <p>tam. 41</p>
-                                <p>Quant. 1</p>
+                                <SelecaoTamanho id={props.id}></SelecaoTamanho>
                                 <p>Cor: preto</p>
                             </div>
                         </section>

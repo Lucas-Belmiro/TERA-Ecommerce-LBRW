@@ -12,8 +12,8 @@ const InfoCarrinho = ()=>{
             color: "Preto",
             img: "/imagens/3.png",
             id: "product1",
-            size: "",
-            quantity: "",
+            size: "38",
+            quantity: 1,
             numberSales: 0
         },
     
@@ -23,8 +23,8 @@ const InfoCarrinho = ()=>{
             color: "Preto",
             img: "/imagens/2.png",
             id: "product2",
-            size: "",
-            quantity: "",
+            size: "38",
+            quantity: 1,
             numberSales: 0
         },
     
@@ -34,8 +34,8 @@ const InfoCarrinho = ()=>{
             color: "Preto",
             img: "/imagens/1.png",
             id: "product3",
-            size: "",
-            quantity: "",
+            size: "38",
+            quantity: 1,
             numberSales: 0
         },
     
@@ -45,8 +45,8 @@ const InfoCarrinho = ()=>{
             color: "Branco",
             img: "/imagens/4.png",
             id: "product4",
-            size: "",
-            quantity: "",
+            size: "38",
+            quantity: 1,
             numberSales: 0
         },
     
@@ -56,8 +56,8 @@ const InfoCarrinho = ()=>{
             color: "Rosa",
             img: "/imagens/5.jpg",
             id: "product5",
-            size: "",
-            quantity: "",
+            size: "38",
+            quantity: 1,
             numberSales: 0
         },
     
@@ -67,8 +67,8 @@ const InfoCarrinho = ()=>{
             color: "Pink",
             img: "/imagens/6.jpg",
             id: "product6",
-            size: "",
-            quantity: "",
+            size: 38,
+            quantity: 1,
             numberSales: 0
         },
     
@@ -78,8 +78,8 @@ const InfoCarrinho = ()=>{
             color: "Preto",
             img: "/imagens/7.jpg",
             id: "product7",
-            size: "",
-            quantity: "",
+            size: "38",
+            quantity: 1,
             numberSales: 0
         },
     
@@ -89,8 +89,8 @@ const InfoCarrinho = ()=>{
             color: "Preto",
             img: "/imagens/8.jpg",
             id: "product8",
-            size: "",
-            quantity: "",
+            size: "38",
+            quantity: 1,
             numberSales: 0
     
         },
@@ -101,8 +101,8 @@ const InfoCarrinho = ()=>{
             color: "Preto",
             img: "/imagens/9.jpg",
             id: "product9",
-            size: "",
-            quantity: "",
+            size: "38",
+            quantity: 1,
             numberSales: 0
         }
     ]
@@ -112,6 +112,7 @@ const InfoCarrinho = ()=>{
     const [precos, setPrecos] = useState([]);
     
 
+    //do local storage para um array ajustado
 
     useEffect(()=>{
         let armazenaArray = []
@@ -128,25 +129,39 @@ const InfoCarrinho = ()=>{
 
         let armazenaObjetos = [];
 
+        const idExtistente = JSON.parse(localStorage.getItem("id")) || [];
+        const tamanhoExtistente = JSON.parse(localStorage.getItem("tamanho")) || [];
+        const quantidadeExtistente = JSON.parse(localStorage.getItem("quantidade")) || [];
+
         arrayAjustado.forEach(element => {
             productArray.forEach(element2 => {
                 if(element == element2.id){
-                    armazenaObjetos.push(element2)
+
+                        armazenaObjetos.push(element2)
+                      
                 }
+
             });  
         });
-            setCarrinhoProdutos(armazenaObjetos)
-    }, []) 
 
-    // soma de valores
+        localStorage.setItem(`itensDoCarrinho`, JSON.stringify(armazenaObjetos))
+
+        const produtosExistentes = JSON.parse(localStorage.getItem("itensDoCarrinho")) || [];
+        setCarrinhoProdutos(produtosExistentes)
+           
+    }, []) 
+  
+   
 
     useEffect(()=>{
-
+        const produtosExistentes = JSON.parse(localStorage.getItem("itensDoCarrinho")) || [];
         let arrayDePrecos = [];
 
-        carrinhoProdutos.forEach(element => {
-            arrayDePrecos.push(parseInt(element.price))
+        produtosExistentes.forEach(element => {
+            arrayDePrecos.push((parseInt(element.price) * element.quantity))
         });
+
+        console.log(arrayDePrecos)
 
         const initialValue = 25;
         const sumWithInitial = arrayDePrecos.reduce(
@@ -158,7 +173,9 @@ const InfoCarrinho = ()=>{
 
         setPrecos(arrayDePrecos)
     
-    }, [somaDeValores]) 
+    }, []) 
+
+   
 
     return (
         <>
@@ -170,7 +187,7 @@ const InfoCarrinho = ()=>{
 
                         <h5 className="mb-3">Produto</h5>
                         <div className="ajusta-itens">
-                            {carrinhoProdutos.map(produto=><ItemCarrinho key = {produto.price} nome = {produto.name} imagem = {produto.img} id = {produto.id}></ItemCarrinho>)}
+                            {carrinhoProdutos.map(produto=><ItemCarrinho key = {produto.price} nome = {produto.name} imagem = {produto.img} id = {produto.id} quantidade = {produto.quantity} tamanho = {produto.size}></ItemCarrinho>)}
                         </div>
                         
                         <div className="frete mt-3">
@@ -186,7 +203,7 @@ const InfoCarrinho = ()=>{
                         <p>{precos.length} produto(s):  {precos.map(precos=>`${precos} `)}</p>
                         <p>Frete:                 25 reais</p>
                         <hr className="separador"></hr>
-                        <p className="total-carrinho">Total: {somaDeValores}</p>
+                        <p className="total-carrinho">Total: {somaDeValores}</p> 
                         <button className="btn btn-primary botao-comprar">Comprar</button> 
                     </div>
 

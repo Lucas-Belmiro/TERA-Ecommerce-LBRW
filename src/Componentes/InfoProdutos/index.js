@@ -140,13 +140,6 @@ const InfoProdutos = (props)=>{
                         <div>
                             <h3>{objeto.name}</h3>
                             <h4>R$ {objeto.price}</h4>
-                            <h6>Tamanhos:</h6>
-                            <SelecaoTamanho></SelecaoTamanho>
-                            <h6>Quantidade:</h6>
-                            <div className="box-incremento-quantidade">
-                                <IncrmentoQuantidade></IncrmentoQuantidade>
-                            </div>
-                            
                             <Link to="/carrinho" className="btn btn-primary botao-produto">Adicionar ao carrinho</Link>
                         </div>
                     </div>
