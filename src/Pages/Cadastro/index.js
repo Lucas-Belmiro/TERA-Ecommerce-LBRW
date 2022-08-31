@@ -14,7 +14,7 @@ const Cadastro = ()=>{
                 <div className="divisor-cadastro">
                     <h4>Insira seu cadastro abaixo</h4>
                     <section className="form-cadastro">
-                        <div>
+                        <div className="adjust-form">
                             <FormCadastro></FormCadastro>
                         </div>
                         <div>
