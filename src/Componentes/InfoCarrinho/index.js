@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import ItemCarrinho from "../ItemCarrinho"
 import "./InfoCarrinho.css"
+import { Link } from "react-router-dom";
 
 const InfoCarrinho = ()=>{
 
@@ -204,7 +205,7 @@ const InfoCarrinho = ()=>{
                         <p>Frete:                 25 reais</p>
                         <hr className="separador"></hr>
                         <p className="total-carrinho">Total: {somaDeValores}</p> 
-                        <button className="btn btn-primary botao-comprar">Comprar</button> 
+                        <Link to="/login" className="btn btn-primary botao-comprar">Comprar</Link> 
                     </div>
 
                 </div>
