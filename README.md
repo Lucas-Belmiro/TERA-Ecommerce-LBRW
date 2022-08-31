@@ -3,8 +3,6 @@
 
 #### Desenvolvimento completo de uma loja online com integração com back-end. Válido como obtenção de certificado no curso Dev. WEB **FullStack** da TERA.
 
-Acesse a página com o site publicado: [página completa](https://lucas-belmiro.github.io/Projeto_Tera_Ecomerce/)
-
 ##### Tecnologias utilizadas:
 
 ``` Git/GitHubm HTML, CSS, JavaScript, Bootstrap, Node.js + express + MongoDB, React ```
