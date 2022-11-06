@@ -11,6 +11,7 @@ function Card2(props) {
     function armazenaId (){
       localStorage.setItem(`${props.id}`, JSON.stringify(props.id))
       localStorage.setItem(`id`, JSON.stringify(props.id))
+
     }
 
 

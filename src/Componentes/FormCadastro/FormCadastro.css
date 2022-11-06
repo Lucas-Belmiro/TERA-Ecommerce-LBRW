@@ -1,4 +1,9 @@
 .botao-login{
     margin-left: 20px;
     margin-top: 5px;
+    color: black;
+}
+
+.botao-login:hover{
+    color: black;
 }

@@ -18,10 +18,9 @@ const Login = ()=>{
                             <FormLogin></FormLogin>
                         </div>
                         <div>
-                            <img src="/imagens/sportMan.png"></img>
-                        </div>
+                            <img src="/imagens/sportMan.png" alt="Esportista com garrafa de água na mão"></img>
+                        </div> 
                     </section>
-
                 </div>
 
                 <div>

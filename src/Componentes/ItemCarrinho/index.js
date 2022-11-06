@@ -10,8 +10,6 @@ const ItemCarrinho = (props)=>{
         localStorage.removeItem(param)
         window.location.reload(false)
         this.forceUpdate()
-
-      
         
     }
     return(

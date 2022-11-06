@@ -3,6 +3,8 @@ import IncrmentoQuantidade from "../IncrementoQuantidade";
 import SelecaoTamanho from "../SelecaoTamanho";
 import "./InfoProdutos.css"
 import { Link } from "react-router-dom";
+import InfoExtra from "../InfoExtra";
+import Loading from "../Loading";
 
 
 const InfoProdutos = (props)=>{
@@ -111,11 +113,15 @@ const InfoProdutos = (props)=>{
     ]
 
     const [objeto, setObjeto] = useState(""); 
+    const [showLoading, setShowLoading] = useState(true); 
     
     useEffect(()=>{
+
         const idExtistente = JSON.parse(localStorage.getItem("id")) || [];
         const armazenaObjeto = productArray.find(e=> e.id == idExtistente)
-        setObjeto(armazenaObjeto)
+        setObjeto(armazenaObjeto);
+        setShowLoading(false)
+
     }, [])
 
 
@@ -138,13 +144,15 @@ const InfoProdutos = (props)=>{
 
                     <div className="info-extra">
                         <div>
-                            <h3>{objeto.name}</h3>
-                            <h4>R$ {objeto.price}</h4>
-                            <Link to="/carrinho" className="btn btn-primary botao-produto">Adicionar ao carrinho</Link>
+                            <InfoExtra name = {objeto.name} price = {objeto.price} ></InfoExtra>
+                            <Link to="/carrinho" className="btn btn-primary botao-produto">Adicionar ao carrinho</Link>    
                         </div>
                     </div>
                 </section>
+                {showLoading && <Loading></Loading>}   
             </div>
+
+            
 
         </>
     )
