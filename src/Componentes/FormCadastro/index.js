@@ -24,7 +24,7 @@ function FormCadastro() {
       body: JSON.stringify(post),
     };
 
-    fetch("http://54.232.13.41:5000/save", options).then((res) => {
+    fetch("https://lucasbelmiro.com/save", options).then((res) => {
       console.log(res);
       meuInputNome.current.value = "";
       meuInputEmail.current.value = "";

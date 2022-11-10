@@ -20,7 +20,7 @@ const FinalizacaoDeCompra = () => {
       body: JSON.stringify(post),
     };
 
-    fetch("https://lbrw.herokuapp.com/verifyToken", options).then((res) => {
+    fetch("https://lucasbelmiro.com/verifyToken", options).then((res) => {
       if (res.status === 200) {
         setToken(true);
       } else {

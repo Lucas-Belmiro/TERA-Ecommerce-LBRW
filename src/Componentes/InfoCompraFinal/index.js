@@ -52,13 +52,10 @@ const InfoCompraFinal = () => {
       body: JSON.stringify({ tokenExistente: tokenExistente }),
     };
 
-    fetch(`https://lbrw.herokuapp.com/verifyToken`, options2).then((res) => {
+    fetch(`https://lucasbelmiro.com/verifyToken`, options2).then((res) => {
       if (res.status == 200) {
         res.json().then((data) => {
-          localStorage.setItem(
-            "idUsuario",
-            data.userVerify._id
-          );
+          localStorage.setItem("idUsuario", data.userVerify._id);
         });
       } else {
         console.log("Não foi enviado :(");
@@ -68,7 +65,6 @@ const InfoCompraFinal = () => {
     //Verificar os ID's de compras anteriores e adicionar os novos
 
     const idUsuario = localStorage.getItem("idUsuario") || [];
-    
 
     const options3 = {
       method: "POST",
@@ -78,10 +74,10 @@ const InfoCompraFinal = () => {
 
     console.log(options3.body);
 
-    fetch(`https://lbrw.herokuapp.com/id`, options3).then((res) => {
+    fetch(`https://lucasbelmiro.com/id`, options3).then((res) => {
       if (res.status == 200) {
         res.json().then((data2) => {
-          let comprasPassadas = data2.id.compras
+          let comprasPassadas = data2.id.compras;
           localStorage.setItem("idCompras", JSON.stringify(comprasPassadas));
         });
       } else {
@@ -103,11 +99,9 @@ const InfoCompraFinal = () => {
       body: JSON.stringify({ compras: array }),
     };
 
-    fetch(`https://lbrw.herokuapp.com/${idUsuario}`, options).then((res) => {
+    fetch(`https://lucasbelmiro.com/${idUsuario}`, options).then((res) => {
       if (res.status == 200) {
-        res.json().then((data) => {
-          console.log(dado);
-        });
+        res.json().then((data) => {});
       } else {
         console.log("Não foi enviado :(");
       }
@@ -132,7 +126,7 @@ const InfoCompraFinal = () => {
         body: JSON.stringify(returnedTarget),
       };
 
-      fetch("https://lbrw.herokuapp.com/dados/salvar", options).then((res) => {
+      fetch("https://lucasbelmiro.com/dados/salvar", options).then((res) => {
         if (res.status == 200) {
           res.json().then((data) => {
             atualizaUsuario(data.doc._id);

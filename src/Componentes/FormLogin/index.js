@@ -21,7 +21,7 @@ function FormLogin() {
       body: JSON.stringify(post),
     };
 
-    fetch("https://lbrw.herokuapp.com/login", options).then((res) => {
+    fetch("https://lucasbelmiro.com/login", options).then((res) => {
       console.log(res);
 
       meuInputEmail.current.value = "";
