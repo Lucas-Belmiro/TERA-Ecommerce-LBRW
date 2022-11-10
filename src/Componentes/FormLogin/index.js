@@ -17,7 +17,14 @@ function FormLogin() {
 
     const options = {
       method: "POST",
-      headers: new Headers({ "content-type": "application/json" }),
+      headers: new Headers({
+        "content-type": "application/json",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods":
+          "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT",
+        "Access-Control-Allow-Credentials": true,
+      }),
       body: JSON.stringify(post),
     };
 

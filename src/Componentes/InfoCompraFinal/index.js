@@ -48,7 +48,14 @@ const InfoCompraFinal = () => {
 
     const options2 = {
       method: "POST",
-      headers: new Headers({ "content-type": "application/json" }),
+      headers: new Headers({
+        "content-type": "application/json",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods":
+          "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT",
+        "Access-Control-Allow-Credentials": true,
+      }),
       body: JSON.stringify({ tokenExistente: tokenExistente }),
     };
 
@@ -68,7 +75,14 @@ const InfoCompraFinal = () => {
 
     const options3 = {
       method: "POST",
-      headers: new Headers({ "content-type": "application/json" }),
+      headers: new Headers({
+        "content-type": "application/json",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods":
+          "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT",
+        "Access-Control-Allow-Credentials": true,
+      }),
       body: JSON.stringify({ idUser: idUsuario }),
     };
 
@@ -95,7 +109,14 @@ const InfoCompraFinal = () => {
 
     const options = {
       method: "PATCH",
-      headers: new Headers({ "content-type": "application/json" }),
+      headers: new Headers({
+        "content-type": "application/json",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods":
+          "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT",
+        "Access-Control-Allow-Credentials": true,
+      }),
       body: JSON.stringify({ compras: array }),
     };
 
@@ -122,7 +143,14 @@ const InfoCompraFinal = () => {
 
       const options = {
         method: "POST",
-        headers: new Headers({ "content-type": "application/json" }),
+        headers: new Headers({
+          "content-type": "application/json",
+          "Access-Control-Allow-Headers": "Content-Type",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods":
+            "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT",
+          "Access-Control-Allow-Credentials": true,
+        }),
         body: JSON.stringify(returnedTarget),
       };
 
