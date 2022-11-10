@@ -38,7 +38,7 @@ function FormLogin() {
       meuInputSenha.current.value = "";
 
       if (res.status == 200) {
-        alert("Usuário logado com sucesso!");
+        //alert("Usuário logado com sucesso!");
 
         res.json().then((data) => {
           console.log(data);
