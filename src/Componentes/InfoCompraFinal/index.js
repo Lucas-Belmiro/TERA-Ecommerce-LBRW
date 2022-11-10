@@ -91,6 +91,7 @@ const InfoCompraFinal = () => {
       if (res.status == 200) {
         res.json().then((data2) => {
           let comprasPassadas = data2.compras;
+          console.log(comprasPassadas)  
           localStorage.setItem("idCompras", JSON.stringify(comprasPassadas));
         });
       } else {
