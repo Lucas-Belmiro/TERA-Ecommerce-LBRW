@@ -20,7 +20,7 @@ const PaginaObrigado = () => {
       body: JSON.stringify(post),
     };
 
-    fetch("http://localhost:5000/verifyToken", options).then((res) => {
+    fetch("https://lbrw.herokuapp.com/verifyToken", options).then((res) => {
       if (res.status === 200) {
         setToken(true);
       } else {

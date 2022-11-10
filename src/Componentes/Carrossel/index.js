@@ -1,29 +1,25 @@
-import "./Carrossel.css"
-import Carousel from 'react-bootstrap/Carousel';
+import "./Carrossel.css";
+import Carousel from "react-bootstrap/Carousel";
 
 function Carrossel() {
-
   return (
     <Carousel variant="dark">
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="/imagens/Image1.jpg"
+          src={"Imagens/Image1.jpg"}
           alt="First slide"
         />
-        <Carousel.Caption>
-        </Carousel.Caption>
+        <Carousel.Caption></Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="/imagens/image2.jpg"
+          src="imagens/image2.jpg"
           alt="Second slide"
         />
-        <Carousel.Caption>
-        </Carousel.Caption>
+        <Carousel.Caption></Carousel.Caption>
       </Carousel.Item>
-
     </Carousel>
   );
 }

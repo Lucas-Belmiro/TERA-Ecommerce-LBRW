@@ -42,6 +42,8 @@ const InfoCompraFinal = () => {
   function atualizaUsuario(dado) {
     const tokenExistente = localStorage.getItem("token") || [];
 
+    console.log(dado);
+
     //Eu pego os dados do usuário (ID)
 
     const options2 = {
@@ -50,7 +52,7 @@ const InfoCompraFinal = () => {
       body: JSON.stringify({ tokenExistente: tokenExistente }),
     };
 
-    fetch(`http://54.232.13.41:5000/verifyToken`, options2).then((res) => {
+    fetch(`https://lbrw.herokuapp.com/verifyToken`, options2).then((res) => {
       if (res.status == 200) {
         res.json().then((data) => {
           localStorage.setItem(
@@ -76,7 +78,7 @@ const InfoCompraFinal = () => {
 
     console.log(options3.body);
 
-    fetch(`http://54.232.13.41:5000/id`, options3).then((res) => {
+    fetch(`https://lbrw.herokuapp.com/id`, options3).then((res) => {
       if (res.status == 200) {
         res.json().then((data2) => {
           let comprasPassadas = data2.id.compras
@@ -91,8 +93,7 @@ const InfoCompraFinal = () => {
 
     //ainda problemático
 
-    let array = [];
-    array.push(dado, ...compraAnterior);
+    const array = [dado, ...compraAnterior];
 
     //Atualizar o usuário adicionando os ID's de compra
 
@@ -102,7 +103,7 @@ const InfoCompraFinal = () => {
       body: JSON.stringify({ compras: array }),
     };
 
-    fetch(`http://54.232.13.41:5000/${idUsuario}`, options).then((res) => {
+    fetch(`https://lbrw.herokuapp.com/${idUsuario}`, options).then((res) => {
       if (res.status == 200) {
         res.json().then((data) => {
           console.log(dado);
@@ -131,7 +132,7 @@ const InfoCompraFinal = () => {
         body: JSON.stringify(returnedTarget),
       };
 
-      fetch("http://54.232.13.41:5000/dados/salvar", options).then((res) => {
+      fetch("https://lbrw.herokuapp.com/dados/salvar", options).then((res) => {
         if (res.status == 200) {
           res.json().then((data) => {
             atualizaUsuario(data.doc._id);

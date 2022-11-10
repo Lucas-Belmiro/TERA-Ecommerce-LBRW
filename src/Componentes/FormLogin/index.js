@@ -21,7 +21,7 @@ function FormLogin() {
       body: JSON.stringify(post),
     };
 
-    fetch("http://54.232.13.41:5000/login", options).then((res) => {
+    fetch("https://lbrw.herokuapp.com/login", options).then((res) => {
       console.log(res);
 
       meuInputEmail.current.value = "";
