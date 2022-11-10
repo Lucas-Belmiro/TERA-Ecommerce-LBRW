@@ -20,14 +20,10 @@ function FormCadastro() {
 
     const options = {
       method: "POST",
-      headers: new Headers({
-        "content-type": "application/json",
-        "Access-Control-Allow-Headers": "Content-Type",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods":
-          "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT",
-        "Access-Control-Allow-Credentials": true,
-      }),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      credentials: "same-origin",
       body: JSON.stringify(post),
     };
 
@@ -44,6 +40,7 @@ function FormCadastro() {
       }
     });
   }
+
 
   return (
     <Form onSubmit={handleSubmit}>

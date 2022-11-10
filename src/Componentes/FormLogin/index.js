@@ -1,10 +1,13 @@
 import "./FormLogin.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React, { useEffect, useRef, useState } from "react";
 
 function FormLogin() {
+
+  const navigate = useNavigate();
+
   let meuInputEmail = useRef(null);
   let meuInputSenha = useRef(null);
 
@@ -42,7 +45,7 @@ function FormLogin() {
           localStorage.setItem("token", data.token);
         });
 
-        window.location.href = "http://localhost:3000/comprafinal";
+        return navigate("/comprafinal");
       } else {
         alert("Erro ao logar");
       }
