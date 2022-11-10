@@ -27,22 +27,22 @@ function Carrinho(props) {
         <Blog
           nome="Dicas de cuidados para o seu tênis"
           descricao=""
-          imagem="/imagens/blog1.png"
+          imagem="/Imagens/blog1.png"
         ></Blog>
         <Blog
           nome="Saiba como correr com mais conforto"
           descricao=""
-          imagem="/imagens/blog2.png"
+          imagem="/Imagens/blog2.png"
         ></Blog>
         <Blog
           nome="Entenda como fazer o alongamento certo"
           descricao=""
-          imagem="/imagens/blog3.png"
+          imagem="/Imagens/blog3.png"
         ></Blog>
         <Blog
           nome="Aprenda qual o tênis certo para o seu esporte"
           descricao=""
-          imagem="/imagens/Blog4.jpg"
+          imagem="/Imagens/Blog4.jpg"
         ></Blog>
       </section>
 
