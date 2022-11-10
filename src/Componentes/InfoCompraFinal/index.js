@@ -157,8 +157,8 @@ const InfoCompraFinal = () => {
       fetch("https://lucasbelmiro.com/dados/salvar", options).then((res) => {
         if (res.status == 200) {
           res.json().then((data) => {
-            atualizaUsuario(data.doc._id);
             localStorage.setItem("id_compra", data.doc._id);
+            atualizaUsuario(data.doc._id);
           });
           alert("Compra efetuada com sucesso!");
           return navigate("/obrigado");
