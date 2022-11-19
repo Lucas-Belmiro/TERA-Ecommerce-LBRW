@@ -43,9 +43,8 @@ function FormLogin() {
         res.json().then((data) => {
           console.log(data);
           localStorage.setItem("token", data.token);
+          return navigate("/comprafinal");
         });
-
-        return navigate("/comprafinal");
       } else {
         alert("Erro ao logar");
       }
