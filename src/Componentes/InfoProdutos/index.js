@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import IncrmentoQuantidade from "../IncrementoQuantidade";
-import SelecaoTamanho from "../SelecaoTamanho";
 import "./InfoProdutos.css";
 import { Link } from "react-router-dom";
 import InfoExtra from "../InfoExtra";

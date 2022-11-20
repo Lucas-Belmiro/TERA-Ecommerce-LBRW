@@ -1,10 +1,11 @@
 import "./FormCadastro.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React, { useRef } from "react";
 
 function FormCadastro() {
+  const navigate = useNavigate();
   let meuInputNome = useRef(null);
   let meuInputEmail = useRef(null);
   let meuInputSenha = useRef(null);
@@ -21,7 +22,7 @@ function FormCadastro() {
     const options = {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
       credentials: "same-origin",
       body: JSON.stringify(post),
@@ -35,12 +36,12 @@ function FormCadastro() {
 
       if (res.status == 200) {
         alert("Usuário cadastrado com sucesso!");
+        return navigate("/login");
       } else {
         alert("Erro ao cadastrar");
       }
     });
   }
-
 
   return (
     <Form onSubmit={handleSubmit}>

@@ -6,8 +6,16 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "./Topo.css";
 import { NavLink as Navigator, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function Topo() {
+  const [objeto, setObjeto] = useState(0);
+  let itensDoCarrinho =
+    JSON.parse(localStorage.getItem("itensDoCarrinho")) || [];
+  useEffect(() => {
+    setObjeto(itensDoCarrinho.length);
+  }, []);
+
   return (
     <Navbar bg="light" expand="lg" className="nav-ecommerce">
       <Container fluid>
@@ -77,10 +85,13 @@ function Topo() {
               ></img>
             </div>
             <div>
-              <img
-                src={"/Imagens/shopping-bag-solid.png"}
-                alt="Botão de carrinho de compras"
-              ></img>
+              <Link className="cart-button" to="/carrinho">
+                <img
+                  src={"/Imagens/shopping-bag-solid.png"}
+                  alt="Botão de carrinho de compras"
+                ></img>
+                <p>{objeto}</p>
+              </Link>
             </div>
           </section>
         </Navbar.Collapse>
