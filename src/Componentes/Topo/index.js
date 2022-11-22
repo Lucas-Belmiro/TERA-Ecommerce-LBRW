@@ -1,3 +1,4 @@
+import React from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -6,15 +7,11 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "./Topo.css";
 import { NavLink as Navigator, Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { CartContext } from "../../Providers/CartProvider";
 
 function Topo() {
-  const [objeto, setObjeto] = useState(0);
-  let itensDoCarrinho =
-    JSON.parse(localStorage.getItem("itensDoCarrinho")) || [];
-  useEffect(() => {
-    setObjeto(itensDoCarrinho.length);
-  }, []);
+  const { numeroDeitems, setNumeroDeitems } = React.useContext(CartContext);
 
   return (
     <Navbar bg="light" expand="lg" className="nav-ecommerce">
@@ -90,7 +87,7 @@ function Topo() {
                   src={"/Imagens/shopping-bag-solid.png"}
                   alt="Botão de carrinho de compras"
                 ></img>
-                <p>{objeto}</p>
+                <p>{numeroDeitems}</p>
               </Link>
             </div>
           </section>

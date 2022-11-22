@@ -1,7 +1,9 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import ItemCarrinho from "../ItemCarrinho";
 import "./InfoCarrinho.css";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../Providers/CartProvider";
 
 const InfoCarrinho = () => {
   const [produtos, setProdutos] = useState([]);
@@ -15,6 +17,8 @@ const InfoCarrinho = () => {
   const [carrinhoProdutos, setCarrinhoProdutos] = useState([]);
   const [somaDeValores, setSomadeValores] = useState([]);
   const [precos, setPrecos] = useState([]);
+
+  const { numeroDeitems, setNumeroDeitems } = React.useContext(CartContext);
 
   //do local storage para um array ajustado
 
@@ -51,6 +55,7 @@ const InfoCarrinho = () => {
     const produtosExistentes =
       JSON.parse(localStorage.getItem("itensDoCarrinho")) || [];
     setCarrinhoProdutos(produtosExistentes);
+    setNumeroDeitems(produtosExistentes.length)
   }, [produtos]);
 
   useEffect(() => {
