@@ -14,7 +14,7 @@ function Topo(props) {
     const { numeroDeitems, setNumeroDeitems, nomeLog, setNomeLog } =
         React.useContext(CartContext)
 
-    const [userId, setUserId] = useState(false)
+    const [userId, setUserId] = useState('')
 
     useEffect(() => {
         const tokenExistente = localStorage.getItem('token') || []
@@ -37,7 +37,7 @@ function Topo(props) {
                     setUserId(data.userVerify._id)
                 })
             } else {
-                console.log('Não foi enviado :(')
+                console.log('dados nao envados')
             }
         })
     }, [])
@@ -62,7 +62,7 @@ function Topo(props) {
                     setNomeLog(data.nome)
                 })
             } else {
-                console.log('Não foi enviado :(')
+                console.log('dados nao envados')
             }
         })
     }, [userId])

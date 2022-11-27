@@ -24,58 +24,6 @@ function App(props) {
     const [xValue, setXValue] = useState(0)
     const [xValue2, setXValue2] = useState(0)
     const [userId, setUserId] = useState(false)
-    const { nomeLog, setNomeLog } = React.useContext(CartContext)
-
-    useEffect(() => {
-        const tokenExistente = localStorage.getItem('token') || []
-        const options2 = {
-            method: 'POST',
-            headers: new Headers({
-                'content-type': 'application/json',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods':
-                    'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT',
-                'Access-Control-Allow-Credentials': true,
-            }),
-            body: JSON.stringify({ tokenExistente: tokenExistente }),
-        }
-
-        fetch(`https://lucasbelmiro.com/verifyToken`, options2).then((res) => {
-            if (res.status == 200) {
-                res.json().then((data) => {
-                    setUserId(data.userVerify._id)
-                })
-            } else {
-                console.log('Não foi enviado :(')
-            }
-        })
-    }, [])
-
-    useEffect(() => {
-        const options3 = {
-            method: 'POST',
-            headers: new Headers({
-                'content-type': 'application/json',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods':
-                    'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT',
-                'Access-Control-Allow-Credentials': true,
-            }),
-            body: JSON.stringify({ _id: userId }),
-        }
-
-        fetch(`https://lucasbelmiro.com/findName`, options3).then((res) => {
-            if (res.status == 200) {
-                res.json().then((data) => {
-                    setNomeLog(data.nome)
-                })
-            } else {
-                console.log('Não foi enviado :(')
-            }
-        })
-    }, [userId])
 
     useEffect(() => {
         fetch(
