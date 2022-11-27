@@ -1,13 +1,14 @@
-.ajuste-card{
-    border: none;
+.ajuste-card2 {
+    border: none !important;
     text-align: center;
+    margin: 20px;
 }
-.ajuste-botao{
+.ajuste-botao {
     background-color: #2326fe;
 }
 
 @media screen and (max-width: 800px) {
-    .ajuste-card{
+    .ajuste-card {
         width: 100%;
     }
-  }
+}

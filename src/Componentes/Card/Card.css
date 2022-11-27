@@ -1,9 +1,21 @@
-.ajuste-card{
-    margin: 20px;
+.ajuste-card {
+    text-align: center;
+    margin: 10px;
+    border: solid 0.3px rgb(139, 139, 139);
 }
-
-.ajuste-botao{
+.ajuste-botao {
     background-color: #2326fe;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
+.ajuste-imagem {
+    display: flex;
+    width: 70%;
+    align-self: center;
+    pointer-events: none;
+}
+
+.ajuste-imagem :hover {
+    transform: scaleX(0.5);
+}

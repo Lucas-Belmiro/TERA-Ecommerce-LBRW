@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react'
 
-export const CartContext = React.createContext({});
+export const CartContext = React.createContext({})
 
 export const CartProvider = (props) => {
-  const [numeroDeitems, setNumeroDeitems] = useState(0);
+    const [numeroDeitems, setNumeroDeitems] = useState(0)
+    const [nomeLog, setNomeLog] = useState('')
 
-  return (
-    <CartContext.Provider value={{ numeroDeitems, setNumeroDeitems }}>
-      {props.children}
-    </CartContext.Provider>
-  );
-};
+    return (
+        <CartContext.Provider
+            value={{ numeroDeitems, setNumeroDeitems, nomeLog, setNomeLog }}
+        >
+            {props.children}
+        </CartContext.Provider>
+    )
+}

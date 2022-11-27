@@ -1,4 +1,4 @@
-.barra-cadastro{
+.barra-cadastro {
     margin-bottom: 80px;
     padding: 0;
     width: 100%;
@@ -10,14 +10,31 @@
     color: whitesmoke;
 }
 
-.barra-cadastro div h5{
+.barra-cadastro div {
+    display: flex;
     text-align: center;
     padding: 20px;
 }
+.barra-cadastro div p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.barra-cadastro div a {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
+}
 
 @media screen and (max-width: 800px) {
-    .barra-cadastro div h5{
+    .barra-cadastro div h5 {
         font-size: 90%;
         padding: 20px;
+    }
+
+    .barra-cadastro div p {
+        font-size: 1rem;
+    }
+    .barra-cadastro div a {
+        font-size: 1rem;
     }
 }
