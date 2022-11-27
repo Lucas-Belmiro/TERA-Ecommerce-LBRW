@@ -62,7 +62,7 @@ function Topo(props) {
                     setNomeLog(data.nome)
                 })
             } else {
-                console.log('dados nao envados')
+                console.log('dados nao enviados')
             }
         })
     }, [userId])
