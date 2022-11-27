@@ -11,61 +11,12 @@ import { useEffect, useState, useRef } from 'react'
 import { CartContext } from '../../Providers/CartProvider'
 
 function Topo(props) {
-    const { numeroDeitems, setNumeroDeitems, nomeLog, setNomeLog } =
-        React.useContext(CartContext)
-
-    const [userId, setUserId] = useState('')
+    const { numeroDeitems, nomeLog, setNomeLog } = React.useContext(CartContext)
+    const [nome, setNome] = useState('')
 
     useEffect(() => {
-        const tokenExistente = localStorage.getItem('token') || []
-        const options2 = {
-            method: 'POST',
-            headers: new Headers({
-                'content-type': 'application/json',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods':
-                    'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT',
-                'Access-Control-Allow-Credentials': true,
-            }),
-            body: JSON.stringify({ tokenExistente: tokenExistente }),
-        }
-
-        fetch(`https://lucasbelmiro.com/verifyToken`, options2).then((res) => {
-            if (res.status == 200) {
-                res.json().then((data) => {
-                    setUserId(data.userVerify._id)
-                })
-            } else {
-                console.log('dados nao envados')
-            }
-        })
-    }, [])
-
-    useEffect(() => {
-        const options3 = {
-            method: 'POST',
-            headers: new Headers({
-                'content-type': 'application/json',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods':
-                    'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT',
-                'Access-Control-Allow-Credentials': true,
-            }),
-            body: JSON.stringify({ _id: userId }),
-        }
-
-        fetch(`https://lucasbelmiro.com/findName`, options3).then((res) => {
-            if (res.status == 200) {
-                res.json().then((data) => {
-                    setNomeLog(data.nome)
-                })
-            } else {
-                console.log('dados nao enviados')
-            }
-        })
-    }, [userId])
+        setNome(nomeLog)
+    }, [nomeLog])
 
     function deslogar() {
         localStorage.removeItem('token')
@@ -172,7 +123,7 @@ function Topo(props) {
                         <div className="user-dropdown">
                             <img src="/Imagens/user-solid.png"></img>
                             <NavDropdown
-                                title={`Bem vindo(a), ${nomeLog}`}
+                                title={`Bem vindo(a), ${nome}`}
                                 id="navbarScrollingDropdown"
                             >
                                 <NavDropdown.Item

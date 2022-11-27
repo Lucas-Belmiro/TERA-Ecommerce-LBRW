@@ -23,7 +23,6 @@ function App(props) {
     const [width2, setWidth2] = useState(0)
     const [xValue, setXValue] = useState(0)
     const [xValue2, setXValue2] = useState(0)
-    const [userId, setUserId] = useState(false)
 
     useEffect(() => {
         fetch(
