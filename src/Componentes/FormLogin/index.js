@@ -102,7 +102,7 @@ function FormLogin() {
                     console.log(data)
                     localStorage.setItem('token', data.token)
                     printa()
-                    //return navigate('/comprafinal')
+                    return navigate('/comprafinal')
                 })
             } else {
                 alert('Erro ao logar')
