@@ -120,8 +120,6 @@ const InfoProdutos = (props) => {
     const [objeto, setObjeto] = useState('')
     const [showLoading, setShowLoading] = useState(true)
 
-    const { numeroDeitems, setNumeroDeitems } = React.useContext(CartContext)
-
     useEffect(() => {
         const idExtistente = JSON.parse(localStorage.getItem('id')) || []
         const armazenaObjeto = productArray.find((e) => e.id == idExtistente)

@@ -54,7 +54,6 @@ function FormLogin() {
                             if (res.status == 200) {
                                 res.json().then((data) => {
                                     setNomeLog(data.nome)
-                                    console.log(data.nome)
                                 })
                             } else {
                                 console.log('dados nao enviados')
@@ -89,8 +88,6 @@ function FormLogin() {
         }
 
         fetch('https://lucasbelmiro.com/login', options).then((res) => {
-            console.log(res)
-
             meuInputEmail.current.value = ''
             meuInputSenha.current.value = ''
 
@@ -98,7 +95,6 @@ function FormLogin() {
                 //alert("Usuário logado com sucesso!");
 
                 res.json().then((data) => {
-                    console.log(data)
                     localStorage.setItem('token', data.token)
                     pegarIdUser()
                     return navigate('/comprafinal')
