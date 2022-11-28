@@ -4,7 +4,10 @@
 
 #### Desenvolvimento completo de uma loja online com integração com back-end. Válido como obtenção de certificado no curso Dev. WEB **FullStack** da TERA.
 
-##### Link do projeto: [página completa](https://ecommerce-lbrw.vercel.app/)
+![LBRW](https://user-images.githubusercontent.com/103300371/204313182-32d38d97-b410-4556-a834-8642824346d3.gif)
+![LBRW2](https://user-images.githubusercontent.com/103300371/204316949-c635618b-3b9e-4e05-bee1-a3e2efa6ab67.gif)
+
+##### Link do projeto: [Acesse o site completo aqui](https://ecommerce-lbrw.vercel.app/)
 
 ##### Tecnologias utilizadas:
 
@@ -23,6 +26,3 @@ O e-commerce LBRW é mais que uma loja de sapatos, o site representa a minha evo
 A resiliência para não desistir e a empolgação para aprender cada vez mais são minhas principais características e mal posso esperar para os próximos desafios.
 
 #
-
-![LBRW](https://user-images.githubusercontent.com/103300371/204313182-32d38d97-b410-4556-a834-8642824346d3.gif)
-![preview](https://i.ibb.co/SQFrBSC/Prancheta-1-copiar-2.jpg)
