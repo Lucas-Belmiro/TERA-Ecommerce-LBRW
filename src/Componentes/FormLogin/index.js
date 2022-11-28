@@ -7,12 +7,13 @@ import { CartContext } from '../../Providers/CartProvider'
 
 function FormLogin() {
     const navigate = useNavigate()
+    const [nomeDoUsuario, setNomeDoUsuario] = useState('')
 
     let meuInputEmail = useRef(null)
     let meuInputSenha = useRef(null)
     const { nomeLog, setNomeLog } = React.useContext(CartContext)
 
-    function printa() {
+    function pegarIdUser() {
         const tokenExistente = localStorage.getItem('token') || []
 
         const options2 = {
@@ -31,39 +32,38 @@ function FormLogin() {
         fetch(`https://lucasbelmiro.com/verifyToken`, options2).then((res) => {
             if (res.status == 200) {
                 res.json().then((data) => {
-                    localStorage.setItem('idUser', data.userVerify._id)
+                    //localStorage.setItem('idUser', data.userVerify._id)
+
+                    const options3 = {
+                        method: 'POST',
+                        headers: new Headers({
+                            'content-type': 'application/json',
+                            'Access-Control-Allow-Headers': 'Content-Type',
+                            'Access-Control-Allow-Origin': '*',
+                            'Access-Control-Allow-Methods':
+                                'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT',
+                            'Access-Control-Allow-Credentials': true,
+                        }),
+                        body: JSON.stringify({
+                            valorNome: data.userVerify._id,
+                        }),
+                    }
+
+                    fetch(`https://lucasbelmiro.com/findName`, options3).then(
+                        (res) => {
+                            if (res.status == 200) {
+                                res.json().then((data) => {
+                                    setNomeLog(data.nome)
+                                    console.log(data.nome)
+                                })
+                            } else {
+                                console.log('dados nao enviados')
+                            }
+                        }
+                    )
                 })
             } else {
                 console.log('dados não enviados')
-            }
-        })
-
-        const idUser = localStorage.getItem('idUser') || []
-
-        const options3 = {
-            method: 'POST',
-            headers: new Headers({
-                'content-type': 'application/json',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods':
-                    'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT',
-                'Access-Control-Allow-Credentials': true,
-            }),
-            body: JSON.stringify({ valorNome: idUser }),
-        }
-
-        console.log(idUser)
-
-        fetch(`https://lucasbelmiro.com/findName`, options3).then((res) => {
-            if (res.status == 200) {
-                res.json().then((data) => {
-                    setNomeLog(data.nome)
-
-                    console.log(nomeLog)
-                })
-            } else {
-                console.log('dados nao enviados')
             }
         })
     }
@@ -100,7 +100,7 @@ function FormLogin() {
                 res.json().then((data) => {
                     console.log(data)
                     localStorage.setItem('token', data.token)
-                    printa()
+                    pegarIdUser()
                     return navigate('/comprafinal')
                 })
             } else {

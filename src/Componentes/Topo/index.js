@@ -12,12 +12,7 @@ import { CartContext } from '../../Providers/CartProvider'
 
 function Topo(props) {
     const { numeroDeitems, nomeLog, setNomeLog } = React.useContext(CartContext)
-    const [nome, setNome] = useState('')
     const navigate = useNavigate()
-
-    useEffect(() => {
-        setNome(nomeLog)
-    }, [nomeLog])
 
     function deslogar() {
         localStorage.removeItem('token')
@@ -125,7 +120,7 @@ function Topo(props) {
                         <div className="user-dropdown">
                             <img src="/Imagens/user-solid.png"></img>
                             <NavDropdown
-                                title={`Bem vindo(a), ${nome}`}
+                                title={`Bem vindo(a), ${nomeLog}`}
                                 id="navbarScrollingDropdown"
                             >
                                 <NavDropdown.Item
