@@ -1,8 +1,8 @@
-.box-contador{
+.box-contador {
     display: flex;
 }
 
-.espaco-clique{
+.espaco-clique {
     width: 20px;
     height: 20px;
     display: flex;
@@ -10,7 +10,7 @@
     justify-content: center;
 }
 
-.botao-quantidade{
+.botao-quantidade {
     background-color: #2326fe;
     border: none;
     border-radius: 5px;

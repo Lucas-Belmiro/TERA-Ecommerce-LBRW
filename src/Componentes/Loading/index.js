@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import './Loading.css'
 import Spinner from 'react-bootstrap/Spinner'
 
-//import api from '../../../services/api';
-
 const Loading = () => {
     return (
         <div data-test-id="loading" className="loading-overlay">

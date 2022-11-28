@@ -1,4 +1,4 @@
-.boxDiv{
+.boxDiv {
     width: 33.33%;
     border: solid 1px black;
     border-radius: 5px;
@@ -6,56 +6,54 @@
     padding: 20px;
 }
 
-.boxDiv h4{
+.boxDiv h4 {
     text-align: center;
 }
 
-.container{
+.container {
     width: 100%;
     display: flex;
     margin-top: 40px;
     margin-bottom: 40px;
-    
 }
 
-.segunda-sessao{
+.segunda-sessao {
     width: 100%;
     height: 400px;
     display: flex;
     flex-direction: column;
-    align-items:initial;
-    justify-content:center;
+    align-items: initial;
+    justify-content: center;
 }
 
-.separador{
+.separador {
     width: 100%;
 }
 
-.total-carrinho{
+.total-carrinho {
     font-weight: 600;
     font-size: 18px;
 }
 
-.botao-comprar{
+.botao-comprar {
     width: 100%;
     margin-top: 20px;
 }
 
-.imagem-produto{
+.imagem-produto {
     width: 20%;
     margin: 10px;
 }
 
 @media screen and (max-width: 800px) {
-    .container{
+    .container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center ;
+        justify-content: center;
     }
 
-    .boxDiv{
+    .boxDiv {
         width: 100% !important;
     }
-    
 }

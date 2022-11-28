@@ -1,7 +1,7 @@
 import './Produto.css'
 import Topo from '../../Componentes/Topo'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import React, { Suspense, useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import BarraPromocao from '../../Componentes/BarraPromocao'
 import Blog from '../../Componentes/Blog'
 import BannerCadastro2 from '../../Componentes/BannerCadastro2'

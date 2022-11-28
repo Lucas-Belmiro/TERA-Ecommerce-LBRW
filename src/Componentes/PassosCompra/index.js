@@ -1,14 +1,12 @@
-import "./PassosCompra.css"
+import './PassosCompra.css'
 
-const PassosCompra = ()=>{
+const PassosCompra = () => {
     return (
         <section className="passos-compra">
-    
             <div className="box-1">
-                <div >
+                <div>
                     <p className="ajuste-passos">Revisão</p>
                 </div>
-               
             </div>
 
             <div className="box-2">
@@ -22,4 +20,4 @@ const PassosCompra = ()=>{
     )
 }
 
-export default PassosCompra;
+export default PassosCompra

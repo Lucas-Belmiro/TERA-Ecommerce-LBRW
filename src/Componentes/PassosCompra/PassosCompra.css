@@ -1,15 +1,15 @@
-p{
+p {
     margin: 0;
 }
 
-.passos-compra{
+.passos-compra {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.box-1{
+.box-1 {
     width: 33.33%;
     background-color: #2326fe;
     margin: 40px;
@@ -17,10 +17,9 @@ p{
     display: flex;
     flex-direction: column;
     padding: 15px;
-    
 }
 
-.box-2{
+.box-2 {
     width: 33.33%;
     background-color: #ebebeb;
     margin: 40px;
@@ -30,7 +29,7 @@ p{
     padding: 15px;
 }
 
-.box-3{
+.box-3 {
     width: 33.33%;
     background-color: #ebebeb;
     margin: 40px;
@@ -40,7 +39,7 @@ p{
     padding: 15px;
 }
 
-.ajuste-passos{
+.ajuste-passos {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,26 +49,26 @@ p{
 }
 
 @media screen and (max-width: 800px) {
-    .passos-compra{
+    .passos-compra {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .box-1{
+    .box-1 {
         width: 80%;
         margin: 0;
         padding-left: 0;
         padding-right: 0;
         margin-bottom: 10px;
     }
-    .box-2{
+    .box-2 {
         width: 80%;
         margin: 0;
         padding-left: 0;
         padding-right: 0;
         margin-bottom: 10px;
     }
-    .box-3{
+    .box-3 {
         width: 80%;
         margin: 0;
         padding-left: 0;

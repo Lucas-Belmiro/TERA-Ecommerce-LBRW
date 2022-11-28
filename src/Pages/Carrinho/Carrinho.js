@@ -1,5 +1,4 @@
 import './Carrinho.css'
-
 import Topo from '../../Componentes/Topo'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import React, { useEffect } from 'react'

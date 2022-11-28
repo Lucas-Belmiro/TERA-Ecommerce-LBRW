@@ -10,7 +10,6 @@ function FormLogin() {
 
     let meuInputEmail = useRef(null)
     let meuInputSenha = useRef(null)
-    const [userId, setUserId] = useState('')
     const { nomeLog, setNomeLog } = React.useContext(CartContext)
 
     function printa() {

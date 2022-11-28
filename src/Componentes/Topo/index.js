@@ -6,13 +6,14 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import './Topo.css'
-import { NavLink as Navigator, Link } from 'react-router-dom'
+import { NavLink as Navigator, Link, useNavigate } from 'react-router-dom'
 import { useEffect, useState, useRef } from 'react'
 import { CartContext } from '../../Providers/CartProvider'
 
 function Topo(props) {
     const { numeroDeitems, nomeLog, setNomeLog } = React.useContext(CartContext)
     const [nome, setNome] = useState('')
+    const navigate = useNavigate()
 
     useEffect(() => {
         setNome(nomeLog)
@@ -21,6 +22,7 @@ function Topo(props) {
     function deslogar() {
         localStorage.removeItem('token')
         setNomeLog('')
+        navigate('/login')
     }
 
     return (

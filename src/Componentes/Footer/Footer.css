@@ -1,5 +1,5 @@
-.footer{
-    background-color: #2F302B;
+.footer {
+    background-color: #2f302b;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,7 +7,7 @@
     padding-bottom: 30px;
 }
 
-.direitos{
+.direitos {
     background-color: #131312;
     display: flex;
     justify-content: center;
@@ -16,17 +16,17 @@
     padding-bottom: 16px;
 }
 
-.direitos h6{
+.direitos h6 {
     color: whitesmoke;
     text-align: center;
     padding: 10px;
 }
 
-.logo{
+.logo {
     max-width: 240px;
 }
 
-.icones-sociais img{
+.icones-sociais img {
     max-width: 40px;
     margin-top: 20px;
     margin-bottom: 10px;

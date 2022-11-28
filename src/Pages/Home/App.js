@@ -11,7 +11,6 @@ import Card from '../../Componentes/Card'
 import './App.css'
 import Footer from '../../Componentes/Footer'
 import { motion } from 'framer-motion'
-import { CartContext } from '../../Providers/CartProvider'
 
 function App(props) {
     const [produtos, setProdutos] = useState([])
