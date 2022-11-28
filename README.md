@@ -7,7 +7,7 @@
 ![LBRW](https://user-images.githubusercontent.com/103300371/204313182-32d38d97-b410-4556-a834-8642824346d3.gif)
 ![LBRW2](https://user-images.githubusercontent.com/103300371/204316949-c635618b-3b9e-4e05-bee1-a3e2efa6ab67.gif)
 
-##### Link do projeto: [Acesse o site completo aqui](https://ecommerce-lbrw.vercel.app/)
+##### Link: [Acesse o site completo aqui](https://ecommerce-lbrw.vercel.app/)
 
 ##### Tecnologias utilizadas:
 
@@ -26,3 +26,6 @@ O e-commerce LBRW é mais que uma loja de sapatos, o site representa a minha evo
 A resiliência para não desistir e a empolgação para aprender cada vez mais são minhas principais características e mal posso esperar para os próximos desafios.
 
 #
+
+![LBRW3](https://user-images.githubusercontent.com/103300371/204319601-ac4491dc-a39d-4281-8236-3969b20ffb0e.gif)
+![LBRW4](https://user-images.githubusercontent.com/103300371/204319783-76a87be3-03d8-4f05-ab69-f1b3e8a1428a.gif)
