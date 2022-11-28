@@ -33,7 +33,7 @@ const Footer = () => {
             </section>
 
             <section className="direitos">
-                <h6>© 2022 Copyright: lucasbelmiro.com.br</h6>
+                <p>© 2022 Copyright: lucasbelmiro.com.br</p>
             </section>
         </>
     )

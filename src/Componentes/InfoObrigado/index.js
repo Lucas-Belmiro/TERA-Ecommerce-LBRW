@@ -3,7 +3,6 @@ import Topo from '../../Componentes/Topo'
 import './InfoObrigado.css'
 
 const InfoObrigado = () => {
-    const tokenExtistente = localStorage.getItem('token') || []
     const idCompra = localStorage.getItem('id_compra') || []
 
     return (

@@ -17,6 +17,7 @@ const InfoProdutos = (props) => {
             size: '',
             quantity: '',
             numberSales: 0,
+            alt: 'Tênis esportivo preto da marca Nike com detalhes na cor azuil e branca',
         },
 
         {
@@ -28,6 +29,7 @@ const InfoProdutos = (props) => {
             size: '',
             quantity: '',
             numberSales: 0,
+            alt: 'Tênis esportivo preto da marca Fila com detalhes na cor branca e laranja',
         },
 
         {
@@ -39,6 +41,7 @@ const InfoProdutos = (props) => {
             size: '',
             quantity: '',
             numberSales: 0,
+            alt: 'Tênis esportivo preto da marca Nike com detalhes na cor marrom e branca',
         },
 
         {
@@ -50,6 +53,7 @@ const InfoProdutos = (props) => {
             size: '',
             quantity: '',
             numberSales: 0,
+            alt: 'Tênis esportivo branco da marca Nike com detalhes na cor azul',
         },
 
         {
@@ -61,6 +65,7 @@ const InfoProdutos = (props) => {
             size: '',
             quantity: '',
             numberSales: 0,
+            alt: 'Tênis esportivo rosa claro da marca Nike com detalhes na cor branca',
         },
 
         {
@@ -72,6 +77,7 @@ const InfoProdutos = (props) => {
             size: '',
             quantity: '',
             numberSales: 0,
+            alt: 'Tênis esportivo rosa escuro da marca Nike com detalhes na cor marrom e branca',
         },
 
         {
@@ -83,6 +89,7 @@ const InfoProdutos = (props) => {
             size: '',
             quantity: '',
             numberSales: 0,
+            alt: 'Tênis esportivo preto da marca Nike com detalhes na cor branca',
         },
 
         {
@@ -94,6 +101,7 @@ const InfoProdutos = (props) => {
             size: '',
             quantity: '',
             numberSales: 0,
+            alt: 'Tênis casual preto da marca Addidas com detalhes na cor branca',
         },
 
         {
@@ -105,6 +113,7 @@ const InfoProdutos = (props) => {
             size: '',
             quantity: '',
             numberSales: 0,
+            alt: 'Tênis esportivo preto da marca Addidas com detalhes na cor branca',
         },
     ]
 
@@ -129,6 +138,7 @@ const InfoProdutos = (props) => {
                             <img
                                 className="produto-principal"
                                 src={objeto.img}
+                                alt={objeto.alt}
                             ></img>
                         </div>
 

@@ -14,6 +14,7 @@ function Card2(props) {
                 className="ajuste-imagem"
                 variant="top"
                 src={props.imagem}
+                alt={props.alt}
             />
             <Card.Body>
                 <Card.Title>{props.nome}</Card.Title>

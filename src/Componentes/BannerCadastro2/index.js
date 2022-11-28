@@ -4,10 +4,10 @@ const BannerCadastro2 = () => {
     return (
         <section className="ajuste-banner">
             <div>
-                <h6>
+                <p>
                     Cadastre-se e receba ofertas e lançamentos antes de todo
                     mundo!
-                </h6>
+                </p>
             </div>
 
             <div>

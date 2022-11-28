@@ -30,35 +30,39 @@ function SelecaoTamanho(props) {
                         onClick={() => setTamanho(38)}
                         inline
                         label="38"
-                        name="group1"
+                        name="tamanho 38"
                         type={type}
                         id={`inline-${type}-1`}
                         defaultChecked
+                        aria-label="button 38"
                     />
                     <Form.Check
                         onClick={() => setTamanho(40)}
                         inline
                         label="40"
-                        name="group1"
+                        name="tamanho 40"
                         type={type}
                         id={`inline-${type}-2`}
+                        aria-label="button 38"
                     />
                     <Form.Check
                         onClick={() => setTamanho(41)}
                         inline
                         label="41"
-                        name="group1"
+                        name="tamanho 41"
                         type={type}
                         id={`inline-${type}-3`}
+                        aria-label="button 38"
                     />
 
                     <Form.Check
                         onClick={() => setTamanho(44)}
                         inline
                         label="44"
-                        name="group1"
+                        name="tamanho 44"
                         type={type}
                         id={`inline-${type}-4`}
+                        aria-label="button 38"
                     />
                 </div>
             ))}

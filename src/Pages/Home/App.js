@@ -107,6 +107,7 @@ function App(props) {
                                     preco={produto.price}
                                     imagem={produto.img}
                                     id={produto.id}
+                                    alt={produto.alt}
                                 ></Card>
                             </motion.div>
                         ))}
@@ -168,6 +169,7 @@ function App(props) {
                                     preco={produto.price}
                                     imagem={produto.img}
                                     id={produto.id}
+                                    alt={produto.alt}
                                 ></Card>
                             </motion.div>
                         ))}
@@ -182,7 +184,7 @@ function App(props) {
                     <img
                         className="arrow-button"
                         src={'Imagens/upArrow-01.svg'}
-                        alt="Seta esquerda"
+                        alt="Seta apontando para a esquerda"
                     />
                 </button>
 
@@ -193,7 +195,7 @@ function App(props) {
                     <img
                         className="arrow-button2"
                         src={'Imagens/upArrow-01.svg'}
-                        alt="Seta esquerda"
+                        alt="Seta apontando para a direita"
                     />
                 </button>
             </div>
@@ -205,21 +207,25 @@ function App(props) {
                     nome="Dicas de cuidados para o seu tênis"
                     descricao=""
                     imagem={'/Imagens/blog1.png'}
+                    alt="Homem amarrando o tênis se preparando para correr"
                 ></Blog>
                 <Blog
                     nome="Saiba como correr com mais conforto"
                     descricao=""
                     imagem={'/Imagens/blog2.png'}
+                    alt="Homem com roupa esportiva olhando fixamente para um objetivo preparado para correr"
                 ></Blog>
                 <Blog
                     nome="Entenda como fazer o alongamento certo"
                     descricao=""
                     imagem={'/Imagens/blog3.png'}
+                    alt="Homem com roupa esportiva fazendo alongamento em dia ensolarado"
                 ></Blog>
                 <Blog
                     nome="Aprenda qual o tênis certo para o seu esporte"
                     descricao=""
                     imagem={'/Imagens/Blog4.jpg'}
+                    alt="Homem com tênis branco se preparando para uma corrida"
                 ></Blog>
             </section>
 

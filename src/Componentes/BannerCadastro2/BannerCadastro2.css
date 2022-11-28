@@ -15,7 +15,7 @@
     margin: 40px;
 }
 
-.ajuste-banner div h6 {
+.ajuste-banner div p {
     color: whitesmoke;
     font-size: 1.2rem;
 }
@@ -41,7 +41,7 @@
     .ajuste-banner div {
         margin: 10px;
     }
-    .ajuste-banner div h6 {
+    .ajuste-banner div p {
         padding-left: 0;
         padding-right: 0;
         width: 18rem;
